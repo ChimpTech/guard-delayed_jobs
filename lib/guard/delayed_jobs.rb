@@ -6,12 +6,6 @@ module Guard
   class DelayedJobs < Plugin
     include DelayedJobsVersion
 
-    # Allowed options are:
-    #
-    #
-    #
-    #
-    #
     def initialize(opt = {})
       super
       @opt = opt
