@@ -23,10 +23,13 @@ module Guard
       args << '--monitor' if @opt[:monitor]
       args << '--sleep-delay :sleep_delay' if @opt.key?(:sleep_delay)
       args << '--prefix :prefix' if @opt.key?(:prefix)
+      args << '--queues :queues' if @opt.key?(:queues)
       keys = [
         :min_priority, :max_priority, :number_of_workers, :pid_dir,
-        :identifier, :monitor, :sleep_delay, :prefix
+        :identifier, :monitor, :sleep_delay, :prefix, :queues
       ]
+
+      @opt[:queues] = @opt.fetch(:queues).join(',') if @opt[:queues].is_a?(Enumerable)
 
       Cocaine::CommandLine.new(
         @opt.fetch(:command, 'bin/delayed_job'),
