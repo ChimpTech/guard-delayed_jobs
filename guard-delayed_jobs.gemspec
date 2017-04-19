@@ -29,7 +29,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'guard', '~> 2.1'
   spec.add_dependency 'guard-compat', '~> 1.1'
   spec.add_dependency 'delayed_job', '>= 3.0', '< 5'
-  spec.add_dependency 'cocaine', '~> 0.5.8'
+  spec.add_dependency 'cocaine', '~> 0.5'
 
   spec.add_development_dependency "bundler", "~> 1.11"
   spec.add_development_dependency "rake", "~> 10.0"
